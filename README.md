@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 Country Explorer
 
-## Getting Started
+Una aplicación web desarrollada con **Next.js**, **React** y **GraphQL** que permite explorar países por continente y moneda, y ver información detallada de cada uno.
 
-First, run the development server:
+---
 
+## 🚀 Tecnologías utilizadas
+
+- **Next.js** – Framework de React para SSR y rutas dinámicas.
+- **React** – Librería para construir interfaces modernas.
+- **GraphQL** – Consulta eficiente de datos desde la API pública [`https://countries.trevorblades.com`](https://countries.trevorblades.com).
+- **Apollo Client** o **URQL** – Cliente GraphQL para manejar consultas y caché.
+
+---
+
+## 🛠 Instalación
+
+1. Clona el repositorio:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/tu-usuario/country-explorer.git
+cd country-explorer
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias:
+```bash
+npm install
+# o
+yarn
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+# o
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Abre la app en tu navegador: 👉 http://localhost:3000
 
-## Learn More
+## 🧩 Funcionalidades principales
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **🔍 Buscador de países** por nombre.
+- **🌐 Filtro por continente** (África, Europa, Asia, etc).
+- **💱 Filtro por moneda** (USD, EUR, PEN, etc).
+- **📄 Vista detallada del país** al hacer click en la card:
+  * Código
+  * Emoji
+  * Moneda
+  * Idiomas
+  * Continente
