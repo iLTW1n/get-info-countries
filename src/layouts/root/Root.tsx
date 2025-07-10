@@ -16,9 +16,6 @@ export const RootLayout = (props: Props) => {
     <ApolloProvider client={client}>
       <Header />
       <main>{children}</main>
-      <footer>
-        <p>&copy; 2023 Your Company</p>
-      </footer>
     </ApolloProvider>
   );
 };
