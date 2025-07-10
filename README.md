@@ -2,8 +2,6 @@
 
 Una aplicación web desarrollada con **Next.js**, **React** y **GraphQL** que permite explorar países por continente y moneda, y ver información detallada de cada uno.
 
----
-
 ## 🚀 Tecnologías utilizadas
 
 - **Next.js** – Framework de React para SSR y rutas dinámicas.
@@ -11,7 +9,6 @@ Una aplicación web desarrollada con **Next.js**, **React** y **GraphQL** que pe
 - **GraphQL** – Consulta eficiente de datos desde la API pública [`https://countries.trevorblades.com`](https://countries.trevorblades.com).
 - **Apollo Client** o **URQL** – Cliente GraphQL para manejar consultas y caché.
 
----
 
 ## 🛠 Instalación
 
@@ -48,3 +45,41 @@ yarn dev
   * Moneda
   * Idiomas
   * Continente
+
+---
+# 🌍 Ejercicio de algoritmo
+```js
+function tickets(bills) {
+  const acceptedBills = [25, 50, 100];
+  const hasBillsAccepted = bills.every(bill => acceptedBills.includes(bill));
+  if (!hasBillsAccepted) return "NO";
+
+  let c25 = 0;
+  let c50 = 0;
+
+  for (let bill of bills) {
+    if (bill === 25) {
+      c25++;
+    } else if (bill === 50) {
+      if (c25 === 0) return "NO";
+      c25--;
+      c50++;
+    } else if (bill === 100) {
+      if (c50 > 0 && c25 > 0) {
+        c50--;
+        c25--;
+      } else if (c25 >= 3) {
+        c25 -= 3;
+      } else {
+        return "NO";
+      }
+    }
+  }
+
+  return "SI";
+}
+
+// tickets([25, 25, 50]);         // => "SI"
+// tickets([25, 100]);            // => "NO"
+// tickets([25, 25, 50, 50, 100]) // => "NO"
+```
